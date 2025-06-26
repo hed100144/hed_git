@@ -1,0 +1,40 @@
+/* HTML 요소의 기본 폰트 사이즈 설정 (모바일 우선) */
+html {
+    font-size: 14px; /* 모바일 기본 */
+}
+
+/* 다른 요소들은 rem 단위를 사용 */
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 2rem; /* 14px * 2 = 28px */
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1rem; /* 14px * 1 = 14px */
+    margin-bottom: 0.5rem;
+}
+.button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem; /* 14px * 1.1 = 15.4px */
+}
+
+/* ---------------------------------------------------- */
+/* 미디어 쿼리 내에서 html 폰트 사이즈만 변경 */
+/* ---------------------------------------------------- */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* 태블릿 이상에서 기본 폰트 사이즈를 16px로 변경 */
+    }
+    /* 이 안에서 h1, p, .button 등은 rem 값에 따라 자동으로 크기가 조정됩니다.
+       예: h1은 16px * 2 = 32px가 됩니다. */
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px; /* 데스크톱에서 기본 폰트 사이즈를 18px로 변경 */
+    }
+    /* 예: h1은 18px * 2 = 36px가 됩니다. */
+}
